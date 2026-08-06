@@ -7,7 +7,7 @@ What the name implies
 
 
 ## Requirements
- * Win 8+ with Powershell
+ * Windows (for those unfortunate souls that rely on the Slop OS)
  * 7z (Best if installed, ex. NanaZip automatically makes the 7z env path available)
 
 
