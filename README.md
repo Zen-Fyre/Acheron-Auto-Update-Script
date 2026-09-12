@@ -8,7 +8,7 @@ What the name implies
 
 ## Requirements
  * Windows (for those unfortunate souls that rely on the Slop OS)
- * 7z (Best if installed, ex. NanaZip automatically makes the 7z env path available)
+ * 7z (Any other fork should work, so long as %7z% ENV PATH is set)
 
 
 ## Setup 
