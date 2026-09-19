@@ -19,7 +19,7 @@ IF NOT DEFINED 7zipDir call :7z_missing
 
 SET "BLACKLISTED=FALSE"
 
-CURL -o Acheron.zip -L https://nightly.link/ouwou/acheron/workflows/build/master/acheron-windows-MinSizeRel.zip
+CURL -o Acheron.zip -L "https://nightly.link/ouwou/acheron/workflows/build/master/acheron-windows-MinSizeRel.zip"
 FOR /F "SKIP=1 TOKENS=1" %%A IN ('CERTUTIL -HASHFILE "Acheron.zip" SHA256') DO IF NOT DEFINED HASH SET "HASH=%%A"
 CURL -o BLACKLIST.TXT -L "https://raw.githubusercontent.com/Zen-Fyre/Acheron-Auto-Update-Script/main/sha256-blacklist"
 FOR /F "SKIP=3 DELIMS=: TOKENS=2" %%A IN (BLACKLIST.TXT) DO (
