@@ -17,24 +17,32 @@ IF NOT DEFINED 7zipDir call :7z_missing
 
 ::Start download/Unzip
 
-SET "BLACKLISTED=FALSE"
+SET "ALLOW_UPDATE=TRUE"
 
 CURL -o Acheron.zip -L "https://nightly.link/ouwou/acheron/workflows/build/master/acheron-windows-MinSizeRel.zip"
 FOR /F "SKIP=1 TOKENS=1" %%A IN ('CERTUTIL -HASHFILE "Acheron.zip" SHA256') DO IF NOT DEFINED HASH SET "HASH=%%A"
 CURL -o BLACKLIST.TXT -L "https://raw.githubusercontent.com/Zen-Fyre/Acheron-Auto-Update-Script/main/sha256-blacklist"
 FOR /F "SKIP=3 DELIMS=: TOKENS=2" %%A IN (BLACKLIST.TXT) DO (
 	IF /i "%HASH%"=="%%A" (
-		SET "BLACKLISTED=TRUE"
+		SET "ALLOW_UPDATE=FALSE"
 		ECHO GOT BLACKLISTED
 		)
-	ECHO %HASH%
-	ECHO %%A
 	)
-IF !BLACKLISTED!==FALSE ("!7zipDir!" -y x Acheron.zip)
+FOR /F "TOKENS=1" %%A IN (LAST_VERSION_HASH) DO (
+	IF /i "%HASH%"=="%%A" (
+		SET "ALLOW_UPDATE=FALSE"
+		ECHO SAME VERSION DETECTED, SKIPPING ARCHIVE EXTRACTION
+		)
+	)
+
+IF !ALLOW_UPDATE!==TRUE (
+	"!7zipDir!" -y x Acheron.zip
+	ECHO %HASH%>LAST_VERSION_HASH
+)
 DEL Acheron.Zip
 DEL BLACKLIST.TXT
 START Acheron.exe
-EXIT /b
+EXIT
 
 
 :7z_missing
