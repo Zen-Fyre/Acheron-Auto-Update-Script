@@ -1,0 +1,4 @@
+This file is a hash blacklist of Acheron builds that are broken
+Also ik in the future imma be too lazy to remove the sha256: from the lines lmao
+
+sha256:829044279f6cda7b6f24eb28201ab5f0473a65959c44dc8d52aebf8ae1ec05dc
