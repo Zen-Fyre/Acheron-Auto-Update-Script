@@ -7,12 +7,11 @@ What the name implies
 
 
 ## Requirements
- * Windows (for those unfortunate souls that rely on the Slop OS)
  * 7z (Any other fork should work, so long as %7z% ENV PATH is set)
 
 
 ## Setup 
- * [Download Here](Acheron-Updater.bat) click on the download button on top right
+ * Download one of them [Windows(Unmantained)](Acheron-Updater.bat) [Linux](Acheron-Updater.sh), click on the download button on top right
  * Slap this bad boi into the folder where Acheron will be "installed" and that's where it'll be unpacked, perhaps make it a shortcut of the script into WIN+X ``"shell:startup"``
  * Every time the batch script is executed it'll update and then open Acheron
 
