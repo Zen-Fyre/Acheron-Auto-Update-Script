@@ -12,7 +12,7 @@ What the name implies
 
 ## Setup 
  * Download for [Winbloat(Unmantained)](Acheron-Updater.bat) or [Linux](Acheron-Updater.sh), click on the download button on top right
- * Slap this bad boi into the folder where Acheron will be "installed" and that's where it'll be unpacked, perhaps make it a shortcut of the script into WIN+X ``"shell:startup"``
+ * Slap this bad boi into the folder where Acheron will be "installed" and that's where it'll be unpacked, perhaps make it a shortcut of the script into WIN+X ``"shell:startup"``, or whatever it is that you got for Linux as you prefer
  * Every time the batch script is executed it'll update and then open Acheron
 
 
