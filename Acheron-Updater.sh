@@ -30,8 +30,8 @@ dir="$(cd -P -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd -P)"
 cd $dir
 
 
-#curl -o Acheron.zip -L "https://nightly.link/ouwou/acheron/workflows/build/master/acheron-appimage.zip"
-#curl -o BLACKLIST.TXT -L "https://raw.githubusercontent.com/Zen-Fyre/Acheron-Auto-Update-Script/main/sha256-blacklist"
+curl -o Acheron.zip -L "https://nightly.link/ouwou/acheron/workflows/build/master/acheron-appimage.zip"
+curl -o BLACKLIST.TXT -L "https://raw.githubusercontent.com/Zen-Fyre/Acheron-Auto-Update-Script/main/sha256-blacklist"
 hash=sha256:"$(sha256sum Acheron.zip | awk '{print $1}')"
 ALLOW_UPDATE=true
 
