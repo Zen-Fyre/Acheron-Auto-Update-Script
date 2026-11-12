@@ -1,4 +1,5 @@
 # MOVED TO [GIT.GAY REPO](https://git.gay/ZenFyre/Acheron-Auto-Update-Script)
+###### Me and my homies no like the big slop company
 
 # [Acheron](https://github.com/ouwou/acheron) Auto Update Script
 A simple [Acheron](https://github.com/ouwou/acheron) auto update script for Linux (Winbloat discontinued)
